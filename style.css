@@ -1,0 +1,164 @@
+* {
+  font-family: 'Work Sans', sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 70%;
+  padding: 0 20px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+header .logo img {
+  height: 30px;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  height: 15px;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 12;
+  padding: 20px;
+}
+
+.menu-icon span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #000;
+  transform-origin: center;
+  transition: transform 0.3s ease 0s;
+}
+
+.menu-icon.opened span {
+  background-color: #fff;
+}
+
+.menu-icon.closed span:nth-of-type(2) {
+  width: 10px;
+}
+
+.menu-icon.opened span:nth-of-type(2) {
+  display: none;
+}
+
+.menu-icon.opened span:first-of-type {
+  transform: translateY(6.5px) rotateZ(45deg);
+}
+
+.menu-icon.opened span:last-of-type {
+  transform: translateY(-6.5px) rotateZ(-45deg);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+header .menu {
+  width: 200px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 30px 30px 10px;
+  background-color: #2c4755;
+}
+
+.menu-section span.menu-section-title {
+  color: #637988;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.nav-menu {
+  margin: 5px 0 20px;
+}
+
+ul.nav-menu.main a {
+  font-size: 1.2rem;
+}
+
+header .menu ul a {
+  color: #fff;
+}
+
+header .menu ul a.active,
+header .menu ul a:hover {
+  color: #10cab7;
+}
+
+header .menu-footer {
+  font-size: 0.5rem;
+  color: #637988;
+  margin-top: 50px;
+}
+
+.landing.light {
+  background-image: url(./assets/mountain-light.jpg);
+}
+.landing.dark {
+  background-image: url(./assets/mountain-dark.jpg);
+}
+.landing {
+  background-size: cover;
+}
+
+.overlay.light {
+  background-color: #eee7;
+  color: #000;
+}
+
+.overlay.dark {
+  background-color: #2c475577;
+  color: #fff;
+}
+
+.landing .overlay {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  margin: 120px 0 0;
+  font-weight: 900;
+  font-size: 4em;
+  color: #10cab7;
+}
+
+p {
+  line-height: 2;
+}
